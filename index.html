@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR Budget Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <i data-lucide="wallet" class="logo-icon"></i>
+      <h1>HR Budget Tracker</h1>
+      <div class="header-buttons">
+        <button id="homeButton" class="home-button hidden">
+          <i data-lucide="home"></i>
+          Home
+        </button>
+        <button id="setBudgetButton" class="set-budget-button">
+          <i data-lucide="piggy-bank"></i>
+          Set Budget
+        </button>
+        <button id="resetBudgetButton" class="reset-budget-button hidden">
+          <i data-lucide="refresh-ccw"></i>
+          Reset Budget
+        </button>
+      </div>
+    </header>
+
+    <button id="backButton" class="back-button hidden">
+      <i data-lucide="arrow-left"></i> Back
+    </button>
+
+    <main id="mainContent">
+      <!-- Budget Display -->
+      <div id="budgetDisplay" class="budget-display"></div>
+
+      <!-- Date Navigation -->
+      <div id="dateNavigation" class="date-navigation"></div>
+
+      <!-- Budget View (Initially Hidden) -->
+      <div id="budgetView" class="budget-view hidden">
+        <h2 id="selectedDate" class="selected-date"></h2>
+        
+        <!-- Expense Form -->
+        <form id="expenseForm" class="expense-form">
+          <div class="form-group">
+            <label for="expenseName">Expense Name</label>
+            <input type="text" id="expenseName" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="expenseAmount">Amount (₹)</label>
+            <input type="number" id="expenseAmount" min="0" step="0.01" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="expenseCategory">Category</label>
+            <select id="expenseCategory">
+              <option value="food">Food</option>
+              <option value="transportation">Transportation</option>
+              <option value="entertainment">Entertainment</option>
+              <option value="education">Education</option>
+              <option value="shopping">Shopping</option>
+              <option value="utilities">Utilities</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="submit-button">
+            <i data-lucide="plus-circle"></i>
+            Add Expense
+          </button>
+        </form>
+
+        <div class="content-grid">
+          <!-- Expense List -->
+          <div class="expense-list-container">
+            <h3>Recent Expenses</h3>
+            <div id="expenseList" class="expense-list"></div>
+          </div>
+
+          <!-- Expense Stats -->
+          <div class="expense-stats">
+            <h3>Expense Overview</h3>
+            <div class="total-expenses">
+              <p>Total Expenses</p>
+              <p id="totalAmount" class="total-amount">₹0.00</p>
+            </div>
+            <canvas id="expenseChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

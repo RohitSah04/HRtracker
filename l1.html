@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<div class="login-container">
+    <div class="avatar">
+        <i class="fas fa-user-plus"></i> 
+    </div>
+    <form id="signup-form">
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <small id="username-error" style="color: red; display: none;">Invalid username syntax. Only letters, numbers, and underscores allowed.</small>
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="input-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            <small id="password-error" style="color: red; display: none;">Passwords do not match!</small>
+        </div>
+        <div>
+            <button type="button" id="signup-button">SIGN UP</button>
+        </div>
+        <div class="remember-forgot">
+            <a href="l2.html">Already have an account? Login here</a>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.getElementById('signup-button').addEventListener('click', function() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
+        const usernameError = document.getElementById('username-error');
+        const passwordError = document.getElementById('password-error');
+
+        const usernamePattern = /^[a-zA-Z0-9_]+$/;
+
+        let isValid = true;
+
+        if (!usernamePattern.test(username)) {
+            usernameError.style.display = 'block';
+            isValid = false;
+        } else {
+            usernameError.style.display = 'none';
+        }
+
+        if (password !== confirmPassword) {
+            passwordError.style.display = 'block';
+            isValid = false;
+        } else {
+            passwordError.style.display = 'none';
+        }
+
+        if (isValid) {
+            window.location.href = 'index.html'; 
+        }
+    });
+</script>
+
+</body>
+</html>
