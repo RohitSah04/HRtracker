@@ -1,195 +1,142 @@
-HR Budget Tracker
-Overview
-The HR Budget Tracker is a web-based application designed to help HR departments manage and track their budgets efficiently. It provides an intuitive interface for recording expenses, visualizing spending patterns, and maintaining budget controls.
-Features
+# HR Budget Tracker
+
+A modern, responsive web application for tracking HR-related expenses with an intuitive user interface and comprehensive budget management features.
+
+## Features
+
+- 📊 **Interactive Dashboard**
+  - Yearly, monthly, and daily expense views
+  - Visual charts and graphs for expense analysis
+  - Responsive calendar interface
+
+- 💰 **Budget Management**
+  - Set and track monthly budgets
+  - Real-time budget monitoring
+  - Over-budget notifications
+  - Budget reset functionality
+
+- 💳 **Expense Tracking**
+  - Categorized expense entries
+  - Detailed expense history
+  - Easy expense deletion
+  - Multiple expense categories
+
+- 📈 **Data Visualization**
+  - Doughnut charts for category distribution
+  - Bar charts for yearly expense trends
+  - Visual budget progress indicators
+
+- 🔐 **User Authentication**
+  - Secure login system
+  - User registration
+  - Password protection
+  - Session management
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Chart.js for data visualization
+- Lucide Icons
+- Local Storage for data persistence
+
+## Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/RohitSah04?tab=repositories
+   ```
+
+2. Open the project directory:
+   ```bash
+   cd hr-budget-tracker
+   ```
+
+3. Open `index.html` in your web browser to start using the application.
+
+## Usage
+
+1. **User Authentication**
+   - Register a new account or login with existing credentials
+   - Secure password protection
+
+2. **Setting Budget**
+   - Click "Set Budget" to establish monthly budget
+   - Monitor budget usage with visual indicators
+   - Reset budget when needed
+
+3. **Adding Expenses**
+   - Navigate to desired date
+   - Fill in expense details (name, amount, category)
+   - Submit to save the expense
+
+4. **Viewing Reports**
+   - Switch between yearly, monthly, and daily views
+   - Analyze expense patterns through charts
+   - Track category-wise spending
+
+## Project Structure
+
+```
+hr-budget-tracker/
+├── index.html          # Main application entry
+├── style.css          # Styling definitions
+├── app.js             # Core application logic
+├── l1.html           # Login page
+└── README.md         # Project documentation
+```
+
+## Features in Detail
+
+### Budget Management
+- Set custom monthly budgets
+- Visual progress tracking
+- Over-budget warnings
+- Budget reset functionality
+
+### Expense Categories
+- Food
+- Transportation
+- Entertainment
+- Education
+- Shopping
+- Utilities
+- Other
 
-Real-time budget tracking and management
-Expense categorization system
-Interactive expense entry form
-Visual expense analytics with Chart.js
-Date-based navigation
-Responsive design for all devices
-Category-wise expense breakdown
-Total expense overview
+### Data Visualization
+- Daily expense breakdown
+- Monthly spending trends
+- Yearly expense overview
+- Category distribution charts
 
-Dependencies
+## Browser Support
 
-Chart.js for data visualization
-Lucide Icons for UI elements
-Modern web browser with JavaScript enabled
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
-File Structure
-Copy.
-├── index.html
-├── styles.css
-├── app.js
-└── assets/
-Core Components
-Header Section
+## Contributing
 
-Company logo with wallet icon
-Navigation buttons:
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Home button
-Set Budget button
-Reset Budget button
+## License
 
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-Back navigation button
+## Acknowledgments
 
-Main Interface
+- [Chart.js](https://www.chartjs.org/) for data visualization
+- [Lucide Icons](https://lucide.dev/) for beautiful icons
+- [Unsplash](https://unsplash.com/) for stock images
 
-Budget Display Panel
+## Contact
 
-Shows current budget status
-Displays remaining amounts
+Your Name - Rohit
 
-
-Date Navigation
-
-Allows temporal expense tracking
-Date selection interface
-
-
-Expense Management
-
-Detailed expense entry form
-Category selection
-Amount input with Indian Rupee (₹) support
-
-
-Expense Categories
-
-Food
-Transportation
-Entertainment
-Education
-Shopping
-Utilities
-Other
-
-
-
-Analytics Section
-
-Recent expenses list
-Total expense counter
-Visual expense breakdown
-Category-wise analytics
-
-Setup Instructions
-
-File Placement
-
-Place all files in your web server directory
-Ensure proper file permissions
-
-
-Dependencies Installation
-htmlCopy<!-- Already included in head -->
-<script src="https://unpkg.com/lucide@latest"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-Configuration
-
-Customize categories if needed
-Set initial budget values
-Configure date formats
-
-
-
-Usage Guide
-
-Initial Setup
-
-Click "Set Budget" to establish initial budget
-Configure any necessary preferences
-
-
-Adding Expenses
-
-Fill in expense name
-Enter amount in ₹
-Select appropriate category
-Submit using "Add Expense" button
-
-
-Viewing Analytics
-
-Check total expenses
-Review category breakdown
-Analyze spending patterns through charts
-
-
-Budget Management
-
-Monitor remaining budget
-Reset budget when needed
-Track expenses over time
-
-
-
-Technical Details
-HTML Structure
-
-Semantic HTML5 elements
-Responsive layout classes
-Form validation attributes
-Modular component structure
-
-Features Implementation
-
-Budget Display
-
-Real-time updates
-Formatted currency display
-Visual indicators
-
-
-Expense Form
-
-Input validation
-Category selection
-Amount formatting
-
-
-Analytics
-
-Chart.js integration
-Dynamic data updates
-Interactive visualizations
-
-
-
-Browser Compatibility
-
-Chrome (latest)
-Firefox (latest)
-Safari (latest)
-Edge (latest)
-
-Security Considerations
-
-Input validation implementation needed
-Data persistence strategy required
-User authentication recommended
-CSRF protection advised
-
-Recommended Improvements
-
-Add data export functionality
-Implement multi-currency support
-Add budget alerts/notifications
-Include expense search functionality
-Add expense editing capabilities
-Implement data backup system
-
-Notes
-
-Regular updates recommended
-Backup data regularly
-Monitor performance metrics
-Consider user feedback for improvements
-
-Support
-For technical support or feature requests, please contact the development team.
+Project Link: h-rtracker.vercel.app
