@@ -138,5 +138,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Contact
 
 Your Name - Rohit
+Email- rohitsah84275@gmail.com
 
 Project Link: h-rtracker.vercel.app
